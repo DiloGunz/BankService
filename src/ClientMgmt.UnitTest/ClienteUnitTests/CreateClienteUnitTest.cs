@@ -47,7 +47,7 @@ public class CreateClienteUnitTest
                 Direccion = "Calle Falsa 123",
                 Telefono = "555-1234"
             },
-            Contraseña = "password123",
+            Contrasena = "password123",
             Estado = true
         };
 
@@ -81,7 +81,7 @@ public class CreateClienteUnitTest
                 Direccion = "Calle Verdadera 456",
                 Telefono = "555-6789"
             },
-            Contraseña = "password456",
+            Contrasena = "password456",
             Estado = true
         };
 

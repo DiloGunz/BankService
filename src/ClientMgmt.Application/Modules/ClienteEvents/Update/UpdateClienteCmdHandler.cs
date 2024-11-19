@@ -48,7 +48,7 @@ public class UpdateClienteCmdHandler : IRequestHandler<UpdateClienteCmd, ErrorOr
 
         // Actualizar las propiedades del cliente
         cliente.Estado = request.Estado;
-        cliente.Contraseña = request.Contraseña;
+        cliente.Contrasena = request.Contrasena;
 
         // Actualizar el cliente en la base de datos
         _unitOfWork.Clientes.Update(cliente);

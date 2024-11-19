@@ -19,7 +19,7 @@ GO
 CREATE TABLE client_mgmt.Persona (
     PersonaId UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
     Nombre NVARCHAR(100) NOT NULL,
-    Genero NVARCHAR(10) NOT NULL,
+    Genero INT NOT NULL,
     Edad INT NOT NULL,
     Identificacion NVARCHAR(50) NOT NULL UNIQUE,
     Direccion NVARCHAR(200) NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE client_mgmt.Persona (
 CREATE TABLE client_mgmt.Cliente (
     ClienteId UNIQUEIDENTIFIER PRIMARY KEY, -- También es la clave primaria
     PersonaId UNIQUEIDENTIFIER NOT NULL FOREIGN KEY REFERENCES client_mgmt.Persona(PersonaId),
-    Contraseña NVARCHAR(50) NOT NULL,
+    Contrasena NVARCHAR(50) NOT NULL,
     Estado BIT NOT NULL DEFAULT 1
 );
 
@@ -68,12 +68,12 @@ CREATE INDEX IX_CuentaId ON account_mgmt.Movimiento (CuentaId);
 -- Insertar datos en Persona
 INSERT INTO client_mgmt.Persona (PersonaId, Nombre, Genero, Edad, Identificacion, Direccion, Telefono)
 VALUES 
-(NEWID(), 'Jose Lema', 'Masculino', 30, '12345678', 'Otavalo sn y principal', '098254785'),
-(NEWID(), 'Marianela Montalvo', 'Femenino', 25, '87654321', 'Amazonas y NN.UU', '0975489656'),
-(NEWID(), 'Juan Osorio', 'Masculino', 35, '12349876', '13 junio y Equinoccial', '098874587');
+(NEWID(), 'Jose Lema', 1, 30, '12345678', 'Otavalo sn y principal', '098254785'),
+(NEWID(), 'Marianela Montalvo', 2, 25, '87654321', 'Amazonas y NN.UU', '0975489656'),
+(NEWID(), 'Juan Osorio', 1, 35, '12349876', '13 junio y Equinoccial', '098874587');
 
 -- Insertar datos en Cliente
-INSERT INTO client_mgmt.Cliente (ClienteId, PersonaId, Contraseña, Estado)
+INSERT INTO client_mgmt.Cliente (ClienteId, PersonaId, Contrasena, Estado)
 VALUES 
 (NEWID(), (SELECT TOP 1 PersonaId FROM client_mgmt.Persona WHERE Nombre = 'Jose Lema'), '1234', 1),
 (NEWID(), (SELECT TOP 1 PersonaId FROM client_mgmt.Persona WHERE Nombre = 'Marianela Montalvo'), '5678', 1),
@@ -83,10 +83,10 @@ VALUES
 -- TipoCuenta: 1 = Ahorros, 2 = Corriente
 INSERT INTO account_mgmt.Cuenta (CuentaId, NumeroCuenta, TipoCuenta, SaldoInicial, Estado, ClienteId)
 VALUES 
-(NEWID(), '478758', 1, 2000, 1, (SELECT TOP 1 ClienteId FROM client_mgmt.Cliente WHERE Contraseña = '1234')),
-(NEWID(), '225487', 2, 100, 1, (SELECT TOP 1 ClienteId FROM client_mgmt.Cliente WHERE Contraseña = '5678')),
-(NEWID(), '495878', 1, 0, 1, (SELECT TOP 1 ClienteId FROM client_mgmt.Cliente WHERE Contraseña = '1245')),
-(NEWID(), '496825', 1, 540, 1, (SELECT TOP 1 ClienteId FROM client_mgmt.Cliente WHERE Contraseña = '5678'));
+(NEWID(), '478758', 1, 2000, 1, (SELECT TOP 1 ClienteId FROM client_mgmt.Cliente WHERE Contrasena = '1234')),
+(NEWID(), '225487', 2, 100, 1, (SELECT TOP 1 ClienteId FROM client_mgmt.Cliente WHERE Contrasena = '5678')),
+(NEWID(), '495878', 1, 0, 1, (SELECT TOP 1 ClienteId FROM client_mgmt.Cliente WHERE Contrasena = '1245')),
+(NEWID(), '496825', 1, 540, 1, (SELECT TOP 1 ClienteId FROM client_mgmt.Cliente WHERE Contrasena = '5678'));
 
 -- Insertar datos en Movimiento
 -- TipoMovimiento: 1 = Deposito, 2 = Retiro

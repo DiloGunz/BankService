@@ -1,674 +1,674 @@
 {
-	"info": {
-		"_postman_id": "c414cf17-8da4-42ae-a3dc-ac9447e0ed25",
-		"name": "BankService",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-		"_exporter_id": "4908504"
-	},
-	"item": [
-		{
-			"name": "Gateway",
-			"item": [
-				{
-					"name": "Cliente_Requests",
-					"item": [
-						{
-							"name": "Cliente_GetAll",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{Gateway_Url}}:{{Gateway_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}"
-							},
-							"response": []
-						},
-						{
-							"name": "Cliente_GetById",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{Gateway_Url}}:{{Gateway_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}/b7ef8c98-8933-42f7-87ee-84f8909eb8a0"
-							},
-							"response": []
-						},
-						{
-							"name": "Cliente_Create",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"persona\": {\r\n        \"personaId\": \"776f7e25-155f-4025-be9f-1c66962784d6\",\r\n        \"nombre\": \"Juan Perez\",\r\n        \"genero\": 1,\r\n        \"edad\": 30,\r\n        \"identificacion\": \"88776655\",\r\n        \"direccion\": \"Otavalo sn y principal\",\r\n        \"telefono\": \"098254785\"\r\n    },\r\n    \"clienteId\": \"b7ef8c98-8933-42f7-87ee-84f8909eb8a0\",\r\n    \"personaId\": \"776f7e25-155f-4025-be9f-1c66962784d6\",\r\n    \"contraseña\": \"1234\",\r\n    \"estado\": true\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{Gateway_Url}}:{{Gateway_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}"
-							},
-							"response": []
-						},
-						{
-							"name": "Cliente_Delete",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{Gateway_Url}}:{{Gateway_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}/209acb80-9ba7-437d-4f50-08dd07842b1d"
-							},
-							"response": []
-						},
-						{
-							"name": "Cliente_Update",
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n        \"persona\": {\r\n            \"personaId\": \"9777a4e8-eb48-4210-87ea-7cbf15fbe06e\",\r\n            \"nombre\": \"Juan Osorio 002\",\r\n            \"genero\": 1,\r\n            \"edad\": 35,\r\n            \"identificacion\": \"12349876\",\r\n            \"direccion\": \"13 junio y Equinoccial\",\r\n            \"telefono\": \"098874587\"\r\n        },\r\n        \"clienteId\": \"759b2f3f-2928-42dd-a14e-9ff039b90e2f\",\r\n        \"personaId\": \"9777a4e8-eb48-4210-87ea-7cbf15fbe06e\",\r\n        \"contraseña\": \"1245\",\r\n        \"estado\": true\r\n    }",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{Gateway_Url}}:{{Gateway_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}/759b2f3f-2928-42dd-a14e-9ff039b90e2f"
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Cuenta_Requests",
-					"item": [
-						{
-							"name": "Cuenta_GetAll",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}"
-							},
-							"response": []
-						},
-						{
-							"name": "Cuenta_GetById",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}/ea9ff11d-c75c-4175-99d4-31b78a633ef9"
-							},
-							"response": []
-						},
-						{
-							"name": "Cuenta_Create",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"numeroCuenta\": \"585545\",\r\n    \"tipoCuenta\": 2,\r\n    \"saldoInicial\": 1000.00,\r\n    \"estado\": true,\r\n    \"clienteId\": \"dabdb792-d189-4b9f-a0e3-7b85c3fd407a\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}"
-							},
-							"response": []
-						},
-						{
-							"name": "Cuenta_Delete",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}/5a78b398-4a2a-4299-fc5c-08dd0785e461"
-							},
-							"response": []
-						},
-						{
-							"name": "Cuenta_Update",
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"cuentaId\": \"5a78b398-4a2a-4299-fc5c-08dd0785e461\",\r\n    \"numeroCuenta\": \"666666\",\r\n    \"tipoCuenta\": 1,\r\n    \"saldoInicial\": 2000.00,\r\n    \"estado\": true,\r\n    \"clienteId\": \"b7ef8c98-8933-42f7-87ee-84f8909eb8a0\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}/5a78b398-4a2a-4299-fc5c-08dd0785e461"
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Movimiento_Requests",
-					"item": [
-						{
-							"name": "Movimiento_GetAll",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}"
-							},
-							"response": []
-						},
-						{
-							"name": "Movimiento_GetById",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}/ea9ff11d-c75c-4175-99d4-31b78a633ef9"
-							},
-							"response": []
-						},
-						{
-							"name": "Movimiento_Create",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"tipoMovimiento\": 2,\r\n    \"valor\": -999.00,\r\n    \"cuentaId\": \"ea9ff11d-c75c-4175-99d4-31b78a633ef9\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}"
-							},
-							"response": []
-						},
-						{
-							"name": "Movimiento_CreateByNroCuenta",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n        \"Valor\": -540,\r\n        \"NumeroCuenta\": \"496825\"\r\n    }",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}/createbynrocuenta"
-							},
-							"response": []
-						},
-						{
-							"name": "Movimiento_Delete",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}/0ba0f24d-3036-44af-f0f5-08dd0786b1a0"
-							},
-							"response": []
-						},
-						{
-							"name": "Movimiento_Update",
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"MovimientoId\" : \"0ba0f24d-3036-44af-f0f5-08dd0786b1a0\",\r\n    \"fecha\": \"2024-11-16T23:20:00.557\",\r\n    \"tipoMovimiento\": 1,\r\n    \"valor\": 666.00,\r\n    \"saldo\": 1425.00,\r\n    \"cuentaId\": \"ea9ff11d-c75c-4175-99d4-31b78a633ef9\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}/0ba0f24d-3036-44af-f0f5-08dd0786b1a0"
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Reporte_Requests",
-					"item": [
-						{
-							"name": "EstadoCuenta",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Reporte_EndPoint}}/estadocuenta?fechainicial=01-01-2000&fechafinal=01-01-2030&clienteid=e3a5b09d-446a-4b3b-84d3-11c6ceebb369",
-									"host": [
-										"{{Gateway_Url}}"
-									],
-									"port": "{{Gateway_Port}}{{AccountMgmt_API}}{{Reporte_EndPoint}}",
-									"path": [
-										"estadocuenta"
-									],
-									"query": [
-										{
-											"key": "fechainicial",
-											"value": "01-01-2000"
-										},
-										{
-											"key": "fechafinal",
-											"value": "01-01-2030"
-										},
-										{
-											"key": "clienteid",
-											"value": "e3a5b09d-446a-4b3b-84d3-11c6ceebb369"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "ClientMgmt",
-			"item": [
-				{
-					"name": "Cliente_Requests",
-					"item": [
-						{
-							"name": "MS_Cliente_GetAll",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Cliente_GetById",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}/01d66bb8-469f-426a-b671-0f6f548c2406"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Cliente_Create",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"persona\": {\r\n        \"personaId\": \"776f7e25-155f-4025-be9f-1c66962784d6\",\r\n        \"nombre\": \"Juan Perez\",\r\n        \"genero\": 1,\r\n        \"edad\": 30,\r\n        \"identificacion\": \"88776655\",\r\n        \"direccion\": \"Otavalo sn y principal\",\r\n        \"telefono\": \"098254785\"\r\n    },\r\n    \"clienteId\": \"b7ef8c98-8933-42f7-87ee-84f8909eb8a0\",\r\n    \"personaId\": \"776f7e25-155f-4025-be9f-1c66962784d6\",\r\n    \"contraseña\": \"1234\",\r\n    \"estado\": true\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Cliente_Delete",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}/bcd8b45b-378c-49b8-5e43-08dd082b3963"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Cliente_Update",
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n        \"persona\": {\r\n            \"personaId\": \"9777a4e8-eb48-4210-87ea-7cbf15fbe06e\",\r\n            \"nombre\": \"Juan Osorio 002\",\r\n            \"genero\": 1,\r\n            \"edad\": 35,\r\n            \"identificacion\": \"12349876\",\r\n            \"direccion\": \"13 junio y Equinoccial\",\r\n            \"telefono\": \"098874587\"\r\n        },\r\n        \"clienteId\": \"759b2f3f-2928-42dd-a14e-9ff039b90e2f\",\r\n        \"personaId\": \"9777a4e8-eb48-4210-87ea-7cbf15fbe06e\",\r\n        \"contraseña\": \"1245\",\r\n        \"estado\": true\r\n    }",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}/759b2f3f-2928-42dd-a14e-9ff039b90e2f"
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Persona_Requests",
-					"item": [
-						{
-							"name": "MS_Persona_GetAll",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Persona_EndPoint}}"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Persona_GetById",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Persona_EndPoint}}/3fbb9c9e-5398-4731-850b-5222a27dba54"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Persona_Create",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"nombre\": \"Juan Perez\",\r\n    \"genero\": 1,\r\n    \"edad\": 30,\r\n    \"identificacion\": \"12345688\",\r\n    \"direccion\": \"Otavalo sn y principal\",\r\n    \"telefono\": \"098254785\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Persona_EndPoint}}"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Persona_Delete",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Persona_EndPoint}}/3fbb9c9e-5398-4731-850b-5222a27dba54"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Persona_Update",
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"personaId\": \"3fbb9c9e-5398-4731-850b-5222a27dba54\",\r\n    \"nombre\": \"jose perez 002\",\r\n    \"genero\": 1,\r\n    \"edad\": 30,\r\n    \"identificacion\": \"99999999\",\r\n    \"direccion\": \"Otavalo sn y principal\",\r\n    \"telefono\": \"098254785\"\r\n}\r\n    ",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Persona_EndPoint}}/3fbb9c9e-5398-4731-850b-5222a27dba54"
-							},
-							"response": []
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "AccountMgmt",
-			"item": [
-				{
-					"name": "Cuenta_Requests",
-					"item": [
-						{
-							"name": "MS_Cuenta_GetAll",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Cuenta_GetById",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}/ea9ff11d-c75c-4175-99d4-31b78a633ef9"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Cuenta_Create",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"numeroCuenta\": \"585545\",\r\n    \"tipoCuenta\": 2,\r\n    \"saldoInicial\": 1000.00,\r\n    \"estado\": true,\r\n    \"clienteId\": \"dabdb792-d189-4b9f-a0e3-7b85c3fd407a\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Cuenta_Delete",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"persona\": {\r\n        \"personaId\": \"776f7e25-155f-4025-be9f-1c66962784d6\",\r\n        \"nombre\": \"Juan Perez\",\r\n        \"genero\": \"Masculino\",\r\n        \"edad\": 30,\r\n        \"identificacion\": \"88776655\",\r\n        \"direccion\": \"Otavalo sn y principal\",\r\n        \"telefono\": \"098254785\"\r\n    },\r\n    \"myProperty\": 0,\r\n    \"clienteId\": \"b7ef8c98-8933-42f7-87ee-84f8909eb8a0\",\r\n    \"personaId\": \"776f7e25-155f-4025-be9f-1c66962784d6\",\r\n    \"contraseña\": \"1234\",\r\n    \"estado\": true\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}/5a78b398-4a2a-4299-fc5c-08dd0785e461"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Cuenta_Update",
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"cuentaId\": \"5a78b398-4a2a-4299-fc5c-08dd0785e461\",\r\n    \"numeroCuenta\": \"666666\",\r\n    \"tipoCuenta\": 1,\r\n    \"saldoInicial\": 2000.00,\r\n    \"estado\": true,\r\n    \"clienteId\": \"b7ef8c98-8933-42f7-87ee-84f8909eb8a0\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}/5a78b398-4a2a-4299-fc5c-08dd0785e461"
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Movimiento_Requests",
-					"item": [
-						{
-							"name": "MS_Movimiento_GetAll",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Movimiento_GetById",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}/b5e6838b-3044-45dd-b19a-0eff988098eb"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Movimiento_Create",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"tipoMovimiento\": 2,\r\n    \"valor\": -999.00,\r\n    \"cuentaId\": \"ea9ff11d-c75c-4175-99d4-31b78a633ef9\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Movimiento_CreateByNroCuenta",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"Valor\": -540,\r\n    \"NumeroCuenta\": \"496825\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}/createbynrocuenta"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Movimiento_Delete",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}/0ba0f24d-3036-44af-f0f5-08dd0786b1a0"
-							},
-							"response": []
-						},
-						{
-							"name": "MS_Movimiento_Update",
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"MovimientoId\" : \"0ba0f24d-3036-44af-f0f5-08dd0786b1a0\",\r\n    \"fecha\": \"2024-11-16T23:20:00.557\",\r\n    \"tipoMovimiento\": 1,\r\n    \"valor\": 666.00,\r\n    \"saldo\": 1425.00,\r\n    \"cuentaId\": \"ea9ff11d-c75c-4175-99d4-31b78a633ef9\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}/0ba0f24d-3036-44af-f0f5-08dd0786b1a0"
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Reporte_Requests",
-					"item": [
-						{
-							"name": "EstadoCuenta",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Reporte_EndPoint}}/estadocuenta?FechaInicio=01-01-2000&FechaFin=01-01-2030&clienteid=e3a5b09d-446a-4b3b-84d3-11c6ceebb369",
-									"host": [
-										"{{MS_Account_Mgmt_Url}}"
-									],
-									"port": "{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Reporte_EndPoint}}",
-									"path": [
-										"estadocuenta"
-									],
-									"query": [
-										{
-											"key": "FechaInicio",
-											"value": "01-01-2000"
-										},
-										{
-											"key": "FechaFin",
-											"value": "01-01-2030"
-										},
-										{
-											"key": "clienteid",
-											"value": "e3a5b09d-446a-4b3b-84d3-11c6ceebb369"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				}
-			]
-		}
-	]
+  "info": {
+    "_postman_id": "c414cf17-8da4-42ae-a3dc-ac9447e0ed25",
+    "name": "BankService",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "_exporter_id": "4908504"
+  },
+  "item": [
+    {
+      "name": "Gateway",
+      "item": [
+        {
+          "name": "Cliente_Requests",
+          "item": [
+            {
+              "name": "Cliente_GetAll",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{Gateway_Url}}:{{Gateway_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}"
+              },
+              "response": []
+            },
+            {
+              "name": "Cliente_GetById",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{Gateway_Url}}:{{Gateway_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}/b7ef8c98-8933-42f7-87ee-84f8909eb8a0"
+              },
+              "response": []
+            },
+            {
+              "name": "Cliente_Create",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"persona\": {\r\n        \"personaId\": \"776f7e25-155f-4025-be9f-1c66962784d6\",\r\n        \"nombre\": \"Juan Perez\",\r\n        \"genero\": 1,\r\n        \"edad\": 30,\r\n        \"identificacion\": \"88776655\",\r\n        \"direccion\": \"Otavalo sn y principal\",\r\n        \"telefono\": \"098254785\"\r\n    },\r\n    \"clienteId\": \"b7ef8c98-8933-42f7-87ee-84f8909eb8a0\",\r\n    \"personaId\": \"776f7e25-155f-4025-be9f-1c66962784d6\",\r\n    \"contrasena\": \"1234\",\r\n    \"estado\": true\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{Gateway_Url}}:{{Gateway_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}"
+              },
+              "response": []
+            },
+            {
+              "name": "Cliente_Delete",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{Gateway_Url}}:{{Gateway_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}/209acb80-9ba7-437d-4f50-08dd07842b1d"
+              },
+              "response": []
+            },
+            {
+              "name": "Cliente_Update",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n        \"persona\": {\r\n            \"personaId\": \"9777a4e8-eb48-4210-87ea-7cbf15fbe06e\",\r\n            \"nombre\": \"Juan Osorio 002\",\r\n            \"genero\": 1,\r\n            \"edad\": 35,\r\n            \"identificacion\": \"12349876\",\r\n            \"direccion\": \"13 junio y Equinoccial\",\r\n            \"telefono\": \"098874587\"\r\n        },\r\n        \"clienteId\": \"759b2f3f-2928-42dd-a14e-9ff039b90e2f\",\r\n        \"personaId\": \"9777a4e8-eb48-4210-87ea-7cbf15fbe06e\",\r\n        \"contrasena\": \"1245\",\r\n        \"estado\": true\r\n    }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{Gateway_Url}}:{{Gateway_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}/759b2f3f-2928-42dd-a14e-9ff039b90e2f"
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Cuenta_Requests",
+          "item": [
+            {
+              "name": "Cuenta_GetAll",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}"
+              },
+              "response": []
+            },
+            {
+              "name": "Cuenta_GetById",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}/ea9ff11d-c75c-4175-99d4-31b78a633ef9"
+              },
+              "response": []
+            },
+            {
+              "name": "Cuenta_Create",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"numeroCuenta\": \"585545\",\r\n    \"tipoCuenta\": 2,\r\n    \"saldoInicial\": 1000.00,\r\n    \"estado\": true,\r\n    \"clienteId\": \"dabdb792-d189-4b9f-a0e3-7b85c3fd407a\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}"
+              },
+              "response": []
+            },
+            {
+              "name": "Cuenta_Delete",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}/5a78b398-4a2a-4299-fc5c-08dd0785e461"
+              },
+              "response": []
+            },
+            {
+              "name": "Cuenta_Update",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"cuentaId\": \"5a78b398-4a2a-4299-fc5c-08dd0785e461\",\r\n    \"numeroCuenta\": \"666666\",\r\n    \"tipoCuenta\": 1,\r\n    \"saldoInicial\": 2000.00,\r\n    \"estado\": true,\r\n    \"clienteId\": \"b7ef8c98-8933-42f7-87ee-84f8909eb8a0\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}/5a78b398-4a2a-4299-fc5c-08dd0785e461"
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Movimiento_Requests",
+          "item": [
+            {
+              "name": "Movimiento_GetAll",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}"
+              },
+              "response": []
+            },
+            {
+              "name": "Movimiento_GetById",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}/ea9ff11d-c75c-4175-99d4-31b78a633ef9"
+              },
+              "response": []
+            },
+            {
+              "name": "Movimiento_Create",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"tipoMovimiento\": 2,\r\n    \"valor\": -999.00,\r\n    \"cuentaId\": \"ea9ff11d-c75c-4175-99d4-31b78a633ef9\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}"
+              },
+              "response": []
+            },
+            {
+              "name": "Movimiento_CreateByNroCuenta",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n        \"Valor\": -540,\r\n        \"NumeroCuenta\": \"496825\"\r\n    }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}/createbynrocuenta"
+              },
+              "response": []
+            },
+            {
+              "name": "Movimiento_Delete",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}/0ba0f24d-3036-44af-f0f5-08dd0786b1a0"
+              },
+              "response": []
+            },
+            {
+              "name": "Movimiento_Update",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"MovimientoId\" : \"0ba0f24d-3036-44af-f0f5-08dd0786b1a0\",\r\n    \"fecha\": \"2024-11-16T23:20:00.557\",\r\n    \"tipoMovimiento\": 1,\r\n    \"valor\": 666.00,\r\n    \"saldo\": 1425.00,\r\n    \"cuentaId\": \"ea9ff11d-c75c-4175-99d4-31b78a633ef9\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}/0ba0f24d-3036-44af-f0f5-08dd0786b1a0"
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Reporte_Requests",
+          "item": [
+            {
+              "name": "EstadoCuenta",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Gateway_Url}}:{{Gateway_Port}}{{AccountMgmt_API}}{{Reporte_EndPoint}}/estadocuenta?fechainicial=01-01-2000&fechafinal=01-01-2030&clienteid=e3a5b09d-446a-4b3b-84d3-11c6ceebb369",
+                  "host": [
+                    "{{Gateway_Url}}"
+                  ],
+                  "port": "{{Gateway_Port}}{{AccountMgmt_API}}{{Reporte_EndPoint}}",
+                  "path": [
+                    "estadocuenta"
+                  ],
+                  "query": [
+                    {
+                      "key": "fechainicial",
+                      "value": "01-01-2000"
+                    },
+                    {
+                      "key": "fechafinal",
+                      "value": "01-01-2030"
+                    },
+                    {
+                      "key": "clienteid",
+                      "value": "e3a5b09d-446a-4b3b-84d3-11c6ceebb369"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ClientMgmt",
+      "item": [
+        {
+          "name": "Cliente_Requests",
+          "item": [
+            {
+              "name": "MS_Cliente_GetAll",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Cliente_GetById",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}/01d66bb8-469f-426a-b671-0f6f548c2406"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Cliente_Create",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"persona\": {\r\n        \"personaId\": \"776f7e25-155f-4025-be9f-1c66962784d6\",\r\n        \"nombre\": \"Juan Perez\",\r\n        \"genero\": 1,\r\n        \"edad\": 30,\r\n        \"identificacion\": \"88776655\",\r\n        \"direccion\": \"Otavalo sn y principal\",\r\n        \"telefono\": \"098254785\"\r\n    },\r\n    \"clienteId\": \"b7ef8c98-8933-42f7-87ee-84f8909eb8a0\",\r\n    \"personaId\": \"776f7e25-155f-4025-be9f-1c66962784d6\",\r\n    \"contrasena\": \"1234\",\r\n    \"estado\": true\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Cliente_Delete",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}/bcd8b45b-378c-49b8-5e43-08dd082b3963"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Cliente_Update",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n        \"persona\": {\r\n            \"personaId\": \"9777a4e8-eb48-4210-87ea-7cbf15fbe06e\",\r\n            \"nombre\": \"Juan Osorio 002\",\r\n            \"genero\": 1,\r\n            \"edad\": 35,\r\n            \"identificacion\": \"12349876\",\r\n            \"direccion\": \"13 junio y Equinoccial\",\r\n            \"telefono\": \"098874587\"\r\n        },\r\n        \"clienteId\": \"759b2f3f-2928-42dd-a14e-9ff039b90e2f\",\r\n        \"personaId\": \"9777a4e8-eb48-4210-87ea-7cbf15fbe06e\",\r\n        \"contrasena\": \"1245\",\r\n        \"estado\": true\r\n    }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Cliente_EndPoint}}/759b2f3f-2928-42dd-a14e-9ff039b90e2f"
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Persona_Requests",
+          "item": [
+            {
+              "name": "MS_Persona_GetAll",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Persona_EndPoint}}"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Persona_GetById",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Persona_EndPoint}}/3fbb9c9e-5398-4731-850b-5222a27dba54"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Persona_Create",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nombre\": \"Juan Perez\",\r\n    \"genero\": 1,\r\n    \"edad\": 30,\r\n    \"identificacion\": \"12345688\",\r\n    \"direccion\": \"Otavalo sn y principal\",\r\n    \"telefono\": \"098254785\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Persona_EndPoint}}"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Persona_Delete",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Persona_EndPoint}}/3fbb9c9e-5398-4731-850b-5222a27dba54"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Persona_Update",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"personaId\": \"3fbb9c9e-5398-4731-850b-5222a27dba54\",\r\n    \"nombre\": \"jose perez 002\",\r\n    \"genero\": 1,\r\n    \"edad\": 30,\r\n    \"identificacion\": \"99999999\",\r\n    \"direccion\": \"Otavalo sn y principal\",\r\n    \"telefono\": \"098254785\"\r\n}\r\n    ",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{MS_Client_Mgmt_Url}}:{{MS_Client_Mgmt_Port}}{{ClientMgmt_API}}{{Persona_EndPoint}}/3fbb9c9e-5398-4731-850b-5222a27dba54"
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AccountMgmt",
+      "item": [
+        {
+          "name": "Cuenta_Requests",
+          "item": [
+            {
+              "name": "MS_Cuenta_GetAll",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Cuenta_GetById",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}/ea9ff11d-c75c-4175-99d4-31b78a633ef9"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Cuenta_Create",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"numeroCuenta\": \"585545\",\r\n    \"tipoCuenta\": 2,\r\n    \"saldoInicial\": 1000.00,\r\n    \"estado\": true,\r\n    \"clienteId\": \"dabdb792-d189-4b9f-a0e3-7b85c3fd407a\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Cuenta_Delete",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"persona\": {\r\n        \"personaId\": \"776f7e25-155f-4025-be9f-1c66962784d6\",\r\n        \"nombre\": \"Juan Perez\",\r\n        \"genero\": \"Masculino\",\r\n        \"edad\": 30,\r\n        \"identificacion\": \"88776655\",\r\n        \"direccion\": \"Otavalo sn y principal\",\r\n        \"telefono\": \"098254785\"\r\n    },\r\n    \"myProperty\": 0,\r\n    \"clienteId\": \"b7ef8c98-8933-42f7-87ee-84f8909eb8a0\",\r\n    \"personaId\": \"776f7e25-155f-4025-be9f-1c66962784d6\",\r\n    \"contraseña\": \"1234\",\r\n    \"estado\": true\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}/5a78b398-4a2a-4299-fc5c-08dd0785e461"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Cuenta_Update",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"cuentaId\": \"5a78b398-4a2a-4299-fc5c-08dd0785e461\",\r\n    \"numeroCuenta\": \"666666\",\r\n    \"tipoCuenta\": 1,\r\n    \"saldoInicial\": 2000.00,\r\n    \"estado\": true,\r\n    \"clienteId\": \"b7ef8c98-8933-42f7-87ee-84f8909eb8a0\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Cuenta_EndPoint}}/5a78b398-4a2a-4299-fc5c-08dd0785e461"
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Movimiento_Requests",
+          "item": [
+            {
+              "name": "MS_Movimiento_GetAll",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Movimiento_GetById",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}/b5e6838b-3044-45dd-b19a-0eff988098eb"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Movimiento_Create",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"tipoMovimiento\": 2,\r\n    \"valor\": -999.00,\r\n    \"cuentaId\": \"ea9ff11d-c75c-4175-99d4-31b78a633ef9\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Movimiento_CreateByNroCuenta",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"Valor\": -540,\r\n    \"NumeroCuenta\": \"496825\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}/createbynrocuenta"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Movimiento_Delete",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}/0ba0f24d-3036-44af-f0f5-08dd0786b1a0"
+              },
+              "response": []
+            },
+            {
+              "name": "MS_Movimiento_Update",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"MovimientoId\" : \"0ba0f24d-3036-44af-f0f5-08dd0786b1a0\",\r\n    \"fecha\": \"2024-11-16T23:20:00.557\",\r\n    \"tipoMovimiento\": 1,\r\n    \"valor\": 666.00,\r\n    \"saldo\": 1425.00,\r\n    \"cuentaId\": \"ea9ff11d-c75c-4175-99d4-31b78a633ef9\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Movimiento_EndPoint}}/0ba0f24d-3036-44af-f0f5-08dd0786b1a0"
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Reporte_Requests",
+          "item": [
+            {
+              "name": "EstadoCuenta",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{MS_Account_Mgmt_Url}}:{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Reporte_EndPoint}}/estadocuenta?FechaInicio=01-01-2000&FechaFin=01-01-2030&clienteid=e3a5b09d-446a-4b3b-84d3-11c6ceebb369",
+                  "host": [
+                    "{{MS_Account_Mgmt_Url}}"
+                  ],
+                  "port": "{{MS_Account_Mgmt_Port}}{{AccountMgmt_API}}{{Reporte_EndPoint}}",
+                  "path": [
+                    "estadocuenta"
+                  ],
+                  "query": [
+                    {
+                      "key": "FechaInicio",
+                      "value": "01-01-2000"
+                    },
+                    {
+                      "key": "FechaFin",
+                      "value": "01-01-2030"
+                    },
+                    {
+                      "key": "clienteid",
+                      "value": "e3a5b09d-446a-4b3b-84d3-11c6ceebb369"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

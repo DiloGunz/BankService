@@ -18,7 +18,7 @@ public class CreateClienteCmdValidator : AbstractValidator<CreateClienteCmd>
         RuleFor(x => x.Persona).SetValidator(new CreatePersonaCmdValidator());
 
         // Validar que la contraseña no sea vacía.
-        RuleFor(x => x.Contraseña)
+        RuleFor(x => x.Contrasena)
             .NotEmpty()
             .WithMessage("La contraseña no puede estar vacía.");
     }

@@ -6,7 +6,7 @@ public record CreateClienteCmd
 {
     public Guid ClienteId { get; set; }
     public Guid PersonaId { get; set; }
-    public string Contraseña { get; set; } = string.Empty;
+    public string Contrasena { get; set; } = string.Empty;
     public bool Estado { get; set; } = true;
     public CreatePersonaCmd Persona { get; set; }
 }

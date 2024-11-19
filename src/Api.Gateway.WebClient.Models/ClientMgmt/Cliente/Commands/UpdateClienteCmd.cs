@@ -6,6 +6,6 @@ public record UpdateClienteCmd
 {
     public Guid ClienteId { get; set; }
     public UpdatePersonaCmd Persona { get; set; }
-    public string Contraseña { get; set; } = string.Empty;
+    public string Contrasena { get; set; } = string.Empty;
     public bool Estado { get; set; } = true;
 }

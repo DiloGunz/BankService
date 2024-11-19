@@ -23,6 +23,14 @@ public class UpdatePersonaCmdHandler : IRequestHandler<UpdatePersonaCmd, ErrorOr
             return Error.NotFound("Persona.NotFound", "No se encontró la persona con el Id proporcionado.");
         }
 
+        var existIdentificacion = await _unitOfWork.Personas
+            .AnyAsync(x => x.Identificacion == request.Identificacion && x.PersonaId != request.PersonaId);
+
+        if (existIdentificacion)
+        {
+            return Error.Validation("Persona.Identification", "El número de identificación ya existe.");
+        }
+
         persona.Direccion = request.Direccion;
         persona.Identificacion = request.Identificacion;
         persona.Edad = request.Edad; 

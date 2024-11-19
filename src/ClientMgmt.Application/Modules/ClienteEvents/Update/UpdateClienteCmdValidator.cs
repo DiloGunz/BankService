@@ -23,7 +23,7 @@ public class UpdateClienteCmdValidator : AbstractValidator<UpdateClienteCmd>
             .SetValidator(new UpdatePersonaCmdValidator());
 
         // Validar que la contraseña no sea vacía
-        RuleFor(x => x.Contraseña)
+        RuleFor(x => x.Contrasena)
             .NotEmpty()
             .WithMessage("La contraseña no puede estar vacía.");
     }

@@ -24,7 +24,7 @@ public record CreateClienteCmd : IRequest<ErrorOr<CreateClienteResponse>>
     /// <summary>
     /// Contraseña del cliente.
     /// </summary>
-    public string Contraseña { get; set; } = string.Empty;
+    public string Contrasena { get; set; } = string.Empty;
 
     /// <summary>
     /// Estado del cliente (activo o inactivo).

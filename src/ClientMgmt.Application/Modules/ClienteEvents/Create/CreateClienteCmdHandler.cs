@@ -53,7 +53,7 @@ public class CreateClienteCmdHandler : IRequestHandler<CreateClienteCmd, ErrorOr
                 Direccion = request.Persona.Direccion,
                 Telefono = request.Persona.Telefono
             },
-            Contraseña = request.Contraseña,
+            Contrasena = request.Contrasena,
             Estado = request.Estado
         };
 

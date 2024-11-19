@@ -17,7 +17,7 @@ public class Cliente
     /// <summary>
     /// Contraseña del cliente (requiere manejo seguro en producción, como encriptación).
     /// </summary>
-    public string Contraseña { get; set; } = string.Empty;
+    public string Contrasena { get; set; } = string.Empty;
     /// <summary>
     /// Indica si el cliente está activo (true) o inactivo (false).
     /// </summary>

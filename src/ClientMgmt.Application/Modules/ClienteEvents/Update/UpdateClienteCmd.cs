@@ -22,7 +22,7 @@ public record UpdateClienteCmd : IRequest<ErrorOr<Unit>>
     /// <summary>
     /// Nueva contraseña del cliente.
     /// </summary>
-    public string Contraseña { get; set; } = string.Empty;
+    public string Contrasena { get; set; } = string.Empty;
 
     /// <summary>
     /// Nuevo estado del cliente (activo o inactivo).
