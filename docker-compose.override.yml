@@ -1,0 +1,46 @@
+services:
+  api.gateway.webclient:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      #- ASPNETCORE_HTTPS_PORTS=8081
+    ports:
+      - "3300:8080"
+      #- "3301:8081"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      #- ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+    networks:
+      - bank_network
+  clientmgmt.webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      #- ASPNETCORE_HTTPS_PORTS=8081
+      - ConnectionStrings__SqlServer=Server=192.168.11.11,1434;Database=BankServicesDB;Trusted_Connection=false;User Id=sa;Password=database;Encrypt=false;
+    ports:
+      - "1100:8080"
+      #- "1101:8081"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      #- ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+    networks:
+      - bank_network
+  accountmgmt.webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      #- ASPNETCORE_HTTPS_PORTS=8081
+      - ConnectionStrings__SqlServer=Server=192.168.11.11,1434;Database=BankServicesDB;Trusted_Connection=false;User Id=sa;Password=database;Encrypt=false;
+    ports:
+      - "2200:8080"
+      #- "2201:8081"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      #- ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+    networks:
+      - bank_network
+networks:
+  bank_network:
+    driver: bridge
+

@@ -1,0 +1,27 @@
+services:
+  api.gateway.webclient:
+    image: ${DOCKER_REGISTRY-}apigatewaywebclient
+    container_name: bank_gateway
+    build:
+      context: .
+      dockerfile: src/Api.Gateway.WebClient/Dockerfile
+
+  clientmgmt.webapi:
+    image: ${DOCKER_REGISTRY-}clientmgmtwebapi
+    container_name: client_mgmt
+    build:
+      context: .
+      dockerfile: src/ClientMgmt.WebApi/Dockerfile
+
+
+  accountmgmt.webapi:
+    image: ${DOCKER_REGISTRY-}accountmgmtwebapi
+    container_name: account_mgmt
+    build:
+      context: .
+      dockerfile: src/AccountMgmt.WebApi/Dockerfile
+
+networks:
+  bank_network:
+    driver: bridge
+
