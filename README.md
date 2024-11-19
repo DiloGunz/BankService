@@ -1,4 +1,20 @@
-﻿# Proyecto: API Gateway y Microservicios
+﻿# **Versión**
+
+## **Versión GIT**
+- **Estado:** Actualizada y funcional.
+- **Observación:** Contiene las últimas correcciones implementadas.
+
+## **Versión Carpeta Adjunta**
+- **Estado:** Desactualizada.
+- **Problemas identificados:**
+  1. El **campo "Género"** en la tabla *Cliente* está definido como **string**, mientras que el código trabaja con **ENUM**.
+  2. El **campo "Caontrasena"** en la tabla *Cliente* contiene un error tipográfico (**"ñ"**).
+
+- **Observación:** Estos problemas ya fueron corregidos en la **Versión GIT**.
+
+ ---
+
+# Proyecto: API Gateway y Microservicios
 
 Este proyecto implementa una arquitectura de **microservicios** utilizando un **API Gateway** para centralizar las solicitudes. 
 Consta de dos microservicios:
